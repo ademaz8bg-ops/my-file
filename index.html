@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>dj al arbi</title>
+
+<style>
+/* الخلفية مع ضبابية */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* فلتر الضبابية على الخلفية */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* درجة الضبابية */
+  -webkit-backdrop-filter: blur(5px);
+}
+
+/* البطاقة */
+.container {
+  position: relative; /* لتكون فوق الضبابية */
+  background: rgba(255, 255, 255, 0.8); /* شبه شفافة */
+  width: 90%;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* صورة الشخص */
+img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* العنوان والنص */
+h1 {
+  margin: 10px 0;
+}
+
+p {
+  color: #333;
+  margin: 6px 0;
+}
+
+/* زر الاتصال */
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0a7cff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #065fcc;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <img src="person.jpg" alt="صورة الشخص">
+  <h1>المراقب العربي</h1>
+  <p>العمر: 38 سنة</p>
+  <p>الهواية: موسيقار</p>
+  <p></p>
+  <a href="tel:+213790315361">
+    <button>📞 اتصل الآن</button>
+  </a>
+</div>
+
+</body>
+</html>
